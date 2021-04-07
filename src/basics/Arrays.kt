@@ -2,7 +2,6 @@ package basics
 
 fun main(args: Array<String>) {
 
-    //Different ways of creating.
     val myStringArray = arrayOf("Ramya", "Ashwini", "Raghava")
     var myIntegerArray = intArrayOf(1, 4, 5, 6)
 
