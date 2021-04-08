@@ -18,6 +18,10 @@ fun main(args: Array<String>) {
     val myString = "Ramya"
     val validString = myString.containsLetterA(myString)
     println("validString: $validString")
+
+    myString containsLetterB "Aswini"
+
+    myString.containsLetterB("Ashwini")
 }
 
 fun add(marks1: Int, marks2: Int): Int {
@@ -34,7 +38,7 @@ fun calculateArea(length: Int, breadth: Int): Int {
     return length * breadth
 }
 
-fun sumOfElements(vararg number: Int) {
+ fun sumOfElements(vararg number: Int) {
     println("length: ${number.size}")
     for (i in number)
         println(i)
@@ -48,6 +52,12 @@ fun String.containsLetterA(myString: String): Boolean {
     return myString.contains("A")
 }
 
+/*1. all infix functions are extension functions
+2. infix functions contains only 1 argument
+*/
+infix fun String.containsLetterB(myString: String): Boolean {
+    return myString.contains("B")
+}
 
 class Student {
 
