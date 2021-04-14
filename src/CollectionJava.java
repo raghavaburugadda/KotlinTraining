@@ -1,6 +1,16 @@
 import java.util.*;
 
 public class CollectionJava {
+    private String name;
+    private int id;
+
+    public CollectionJava(String _name) {
+        name = _name;
+    }
+
+    public CollectionJava(String _name, int id) {
+        this.id = id;
+    }
 
     public static void main(String[] args) {
         listImplementation();
@@ -36,6 +46,15 @@ public class CollectionJava {
         for (int i = 0; i < myList.size(); i++) {
             System.out.println(myList.get(i));
         }
+        List<Object> myList1 = new ArrayList<>();
+        myList1.add("RRR");
+        myList1.add(2);
+
+        for (int i = 0; i < myList1.size(); i++) {
+            Object obj = myList1.get(i);
+        }
+
+
     }
 
     public static void setImplementation() {
