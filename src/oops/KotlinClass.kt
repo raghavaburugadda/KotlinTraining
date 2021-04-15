@@ -33,9 +33,4 @@ class KotlinClass(var name: String) {
         this.stuentMarks = marks
         myPercentage = (stuentMarks/100).toString();
     }
-
-
-    fun display() {
-        println("dummy")
-    }
 }

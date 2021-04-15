@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
 
     //By using primary constructor
     val kotlinClass = KotlinClass("Aswini")
-    kotlinClass.studentName="Ramya"
+    kotlinClass.studentName = "Ramya"
     println("${kotlinClass.name}")
 
     val kotlinclass2 = KotlinClass("Aswini", 1, 60)
@@ -16,5 +16,10 @@ fun main(args: Array<String>) {
     myKotlinStudent.studentPercentage = 3.0
     println("Percentage is: ${myKotlinStudent.studentPercentage}")
     println("My Percentage is: ${myKotlinStudent.myPercentage}")
+
+
+    val dog: Dog = Dog("White","Doberman")
+    dog.bark()
+
 }
 

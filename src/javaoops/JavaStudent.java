@@ -1,6 +1,6 @@
 package javaoops;
 
-public class JavaStudent {
+public class JavaStudent extends Student{
     private String jStudentName;
     private int jStudentID;
 
@@ -35,5 +35,10 @@ public class JavaStudent {
 
     public void setjStudentID(int jStudentID) {
         this.jStudentID = jStudentID;
+    }
+
+    @Override
+    public void studentPercentage() {
+
     }
 }
