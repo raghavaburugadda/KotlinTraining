@@ -1,8 +1,5 @@
 package tasks
 
-import oops.Animal
-import oops.Dog
-
 fun main(args: Array<String>) {
     //print1to10InOrder()
     printMultiDimensionalArray()

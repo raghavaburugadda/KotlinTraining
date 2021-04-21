@@ -1,4 +1,4 @@
-package oops
+package oops.inheritance
 
 class Dog : Animal {
     var breed: String = ""

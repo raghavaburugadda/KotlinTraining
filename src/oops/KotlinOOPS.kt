@@ -1,8 +1,79 @@
 package oops
 
-fun main(args: Array<String>) {
+import oops.inheritance.Dog
+import oops.interfaces.KotlinTrainees
+import oops.interfaces.Trainer
+import oops.specialclasses.IndianTeam
+import oops.specialclasses.StudentDataClass
+import oops.specialclasses.StudentNormalClass
 
-    //By using primary constructor
+fun main(args: Array<String>) {
+    val string1 = "A"
+    val string2 = "A"
+
+    //it is going to compare values
+    if (string1 === string2) {
+        println("True")
+    } else {
+        println("False")
+    }
+}
+
+fun dataclassExample() {
+    val myStudent1: StudentDataClass = StudentDataClass(
+        "Raghava"
+        , "150"
+        , "A"
+        , 2
+    )
+    val myStudent2: StudentDataClass = StudentDataClass(
+        "Raghava"
+        , "150"
+        , "A"
+        , 40
+    )
+
+    val myStudent3 = myStudent2.copy(studentRollNumber = 55)
+
+    val myOldStudent1 = StudentNormalClass(
+        "RRR"
+        , "250"
+        , "A"
+        , 44
+    )
+    println(myStudent3.toString())
+    println(myOldStudent1.toString())
+}
+
+fun interfacesExample() {
+    val kotlinTrainer = Trainer("Raghava")
+    val kotlinTraineeList = getTrainees("Ashwini", "Ramya")
+    val kotlinContent = "Kotlin video"
+    val kotlinTrainees = KotlinTrainees()
+
+    kotlinTrainer.startTraining(
+        kotlinTrainees
+        , kotlinTraineeList
+        , kotlinContent
+    )
+
+}
+
+fun getTrainees(vararg studentList: String): ArrayList<String> {
+    val traineesList = ArrayList<String>()
+    for (student in studentList)
+        traineesList.add(student)
+    return traineesList
+}
+
+fun inheritance() {
+    val dog: Dog = Dog("White", "Doberman")
+    dog.bark()
+    val indianTeam = IndianTeam()
+    indianTeam.matches()
+}
+
+fun classesConstructorExample() {
     val kotlinClass = KotlinClass("Aswini")
     kotlinClass.studentName = "Ramya"
     println("${kotlinClass.name}")
@@ -16,10 +87,5 @@ fun main(args: Array<String>) {
     myKotlinStudent.studentPercentage = 3.0
     println("Percentage is: ${myKotlinStudent.studentPercentage}")
     println("My Percentage is: ${myKotlinStudent.myPercentage}")
-
-
-    val dog: Dog = Dog("White","Doberman")
-    dog.bark()
-
 }
 

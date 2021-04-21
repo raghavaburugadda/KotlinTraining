@@ -1,4 +1,4 @@
-package oops
+package oops.inheritance
 
 open class Animal() {
     var color: String = ""

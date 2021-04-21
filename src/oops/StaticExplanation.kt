@@ -1,0 +1,4 @@
+package oops
+
+object StaticExplanation {
+}
