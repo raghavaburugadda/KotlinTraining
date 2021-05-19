@@ -3,20 +3,38 @@ package oops
 import oops.inheritance.Dog
 import oops.interfaces.KotlinTrainees
 import oops.interfaces.Trainer
+import oops.interfaces.ZoomMeeting
 import oops.specialclasses.IndianTeam
 import oops.specialclasses.StudentDataClass
 import oops.specialclasses.StudentNormalClass
+import oops.staticmodifer.CompanionDemo
+import oops.staticmodifer.ObjectKeyword
 
 fun main(args: Array<String>) {
-    val string1 = "A"
-    val string2 = "A"
+    ObjectKeyword.mystaticFun1()
+    CompanionDemo.initAdapter()
+}
 
-    //it is going to compare values
-    if (string1 === string2) {
-        println("True")
-    } else {
-        println("False")
-    }
+fun objectExample() {
+    println(ObjectKeyword.myVar1)
+    ObjectKeyword.mystaticFun1()
+
+    //inherited method
+    ObjectKeyword.eat()
+    val trainer = Trainer("Raghava")
+    trainer.startMeeting(object : ZoomMeeting {
+        override fun startMeeting(userList: List<String>) {
+            super.startMeeting(userList)
+        }
+
+        override fun recordMeeting(videoRecording: String) {
+            super.recordMeeting(videoRecording)
+        }
+
+        override fun endMeeting(userList: List<String>) {
+            super.endMeeting(userList)
+        }
+    })
 }
 
 fun dataclassExample() {

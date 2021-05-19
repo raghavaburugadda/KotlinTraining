@@ -11,4 +11,8 @@ class Trainer(val trainerName: String) {
         zoomMeeting.recordMeeting(trainingContent)
         zoomMeeting.endMeeting(trainees)
     }
+
+    fun startMeeting(zoomMeeting: ZoomMeeting) {
+
+    }
 }

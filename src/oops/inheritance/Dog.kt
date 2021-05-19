@@ -7,7 +7,7 @@ class Dog : Animal {
         this.breed=breed
     }
 
-    fun bark() {
+     fun bark() {
         println("Dog color is $color")
         println("Dog breed is $breed")
         println("dog is barking")

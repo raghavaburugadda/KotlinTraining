@@ -30,5 +30,7 @@ public class JavaOOPS {
         } else {
             System.out.println("student false");
         }
+
+        //StaticDemo.myMethod();
     }
 }
