@@ -7,11 +7,25 @@ class CricketTeam {
     override fun toString(): String {
         return "From object: Team name $teamName"
     }
+
+    fun sort() {
+
+    }
 }
 
 fun main(args: Array<String>) {
-    alsoDemo()
+    letDemo()
 }
+
+fun runDemo() {
+    val cricketTeam: CricketTeam? = null
+    cricketTeam?.run {
+        teamName + "A"
+        teamSize + 6
+        this.sort()
+    }
+}
+
 
 fun withDemo() {
     val cricketTeam = CricketTeam()
@@ -39,6 +53,7 @@ fun applyDemo() {
         //print("Current Team ${this.toString()}")
     }
 
+
     println(cricketTeam.teamName)
     println(cricketTeam.teamSize)
 
@@ -50,6 +65,7 @@ fun applyDemo() {
         {
             teamSize + 90
         }
+        this.sort()
     }
 }
 
@@ -77,9 +93,23 @@ fun alsoDemo(): Int {
     val mycktTeam = CricketTeam()
     mycktTeam.also { println("$it") }
 
-    val str="ashwini"
+    val str = "ashwini"
     str.also { println("dkfjdkjf") }
 
     return 0
+}
+
+fun letDemo() {
+    val myName: String? = null
+    val myTeam: CricketTeam? = null
+
+    myTeam?.let {
+        it.sort()
+    }
+
+    myName?.let {
+        println(it.reversed())
+        println(it.capitalize())
+    }
 }
 

@@ -6,7 +6,9 @@ class CompanionDemo {
 
     }
 
+
     companion object Adapter {
+        var name: String = ""
         fun initAdapter() {
 
         }

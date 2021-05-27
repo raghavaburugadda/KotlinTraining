@@ -3,8 +3,14 @@ package javaoops;
 public class JavaStudent extends Student{
     private String jStudentName;
     private int jStudentID;
+    public static int myID;
 
     public JavaStudent() {
+
+    }
+
+    public static void myMethod()
+    {
 
     }
 
